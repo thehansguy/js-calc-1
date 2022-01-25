@@ -73,10 +73,10 @@ body {
   margin: 1rem;
   /* coloring */
   color: white;
-  background-color: grey;
+  background-color: rgb(34, 34, 34);
   /* effect */
   border: 12px solid red;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   /* animations */
 }
 /* rules for displayArea__operand1Zone */
@@ -121,7 +121,7 @@ body {
   /* coloring */
   /* effect */
   border: 12px solid blue;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
   /* animations */
 }
 .span2 {
