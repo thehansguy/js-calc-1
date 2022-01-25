@@ -1,0 +1,151 @@
+/* Rules for entire page */
+* {
+  /* layout */
+  /* sizing */
+  /* social distancing*/
+  margin: 0;
+  padding: 0;
+  /* coloring */
+  /* effect */
+  box-sizing: border-box;
+  /* animations */
+}
+
+/* rules for body */
+body {
+  /* layout */
+  /* sizing */
+  min-height: 100vh;
+  min-width: 100vw;
+  /* social distancing*/
+  /* coloring */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 78, 255, 1) 100%
+  );
+  /* effect */
+  /* animations */
+}
+/* rules for grid */
+.grid {
+  /* layout */
+  display: grid;
+  /* sizing */
+  /* social distancing*/
+  /* coloring */
+  /* effect */
+
+  /* animations */
+}
+.grid--body {
+  place-items: center;
+  place-content: center;
+}
+/* rules for grid--calculator */
+.grid--calculator {
+  /* layout */
+  /* display: grid; */
+  /* justify-content: center; */
+  /* sizing */
+  min-height: 40vh;
+  max-width: 35rem;
+  /* social distancing*/
+  /* coloring */
+  /* effect */
+  border-radius: 25px;
+  /* animations */
+
+  border: 12px solid yellow;
+}
+/* rules for displayArea */
+.displayArea {
+  /* layout */
+  /* sizing */
+  height: auto;
+  /* social distancing*/
+  padding: 1rem;
+  margin: 1rem;
+  /* coloring */
+  color: white;
+  background-color: grey;
+  /* effect */
+  border: 12px solid red;
+  border-radius: 10px 10px 0 0;
+  text-align: right;
+  /* animations */
+}
+/* rules for displayArea__operand1Zone */
+.displayArea__operand1Zone {
+  /* layout */
+  display: flex;
+  justify-content: flex-end;
+  /* sizing */
+  /* social distancing*/
+  padding: 1rem;
+  /* coloring */
+  /* effect */
+  border: 1px solid yellow;
+  /* animations */
+}
+/* rules for displayArea__operand2Zone */
+.displayArea__operand2Zone {
+  /* layout */
+  display: flex;
+  justify-content: flex-end;
+  /* sizing */
+  font-size: 35px;
+  /* social distancing*/
+  padding: 1rem;
+  /* coloring */
+  color: white;
+  /* effect */
+  border: 1px solid yellow;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  /* animations */
+}
+/* rules for buttonsArea */
+.grid--buttonsArea {
+  /* layout */
+  grid-template-columns: repeat(4, 100px);
+  place-items: center;
+  place-content: center;
+  padding: 15px;
+  /* sizing */
+  /* social distancing*/
+  margin: 1rem;
+  /* coloring */
+  /* effect */
+  border: 12px solid blue;
+  border-radius: 0 0 10px 10px;
+  /* animations */
+}
+.span2 {
+  grid-column: span 2;
+  border-radius: 15px;
+  width: 150px;
+}
+/* rules for buttons */
+button {
+  /* layout */
+
+  /* sizing */
+  width: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  /* social distancing*/
+  padding: 15px;
+  margin: 5px;
+  /* coloring */
+  /* effect */
+  border-radius: 50%;
+  border-style: none;
+  /* animations */
+}
+
+button:hover {
+  background-color: wheat;
+}

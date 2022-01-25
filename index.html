@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
   </head>
-  <body>
-    <div class="calculator-container">
+  <body class="grid grid--body">
+    <div class="grid grid--calculator">
       <!-- display container -->
-      <div class="display-container">
+      <div class="displayArea">
         <!-- operand1 display area -->
-        <div class="operand1-display-area"></div>
+        <div class="displayArea__operand1Zone">Operand1 Zone</div>
         <!-- operand2 display area -->
-        <div class="operand2-display-area"></div>
+        <div class="displayArea__operand2Zone">
+          Operand2 Zone lorem 123456789987654321
+        </div>
       </div>
       <!-- buttons area -->
-      <div class="buttons-area">
+      <div class="grid grid--buttonsArea">
         <!-- buttons -->
-        <button>AC</button>
+        <button class="span2">AC</button>
         <button>DEL</button>
         <button>/</button>
         <button>1</button>
@@ -37,7 +39,7 @@
         <button>-</button>
         <button>.</button>
         <button>0</button>
-        <button>=</button>
+        <button class="span2">=</button>
       </div>
     </div>
   </body>
