@@ -6,31 +6,32 @@ class Calculator {
   }
   // functionality functions
   clear() {
-    this.internalOperand1Value = "";
-    this.internalOperand2Value = "";
-    this.operation = undefined;
+    this.internalFirstOperandValue = "";
+    this.internalSecondOperandValue = "";
+    this.internalOperation = undefined;
     return "cleared mehn!";
   }
   delete() {}
   appendNumberToOperand2Display(number) {
     //   append the numbers as strings would be appended
-    if (number === "." && this.internalOperand2Value.includes("."))
-      return (this.internalOperand2Value =
-        this.internalOperand2Value.toString() + number.toString());
+    if (number === "." && this.internalSecondOperandValue.includes(".")) return;
+    this.internalSecondOperandValue =
+      this.internalSecondOperandValue.toString() + number.toString();
   }
-  chooseOperation(operation) {}
+  chooseOperation(externalOperation) {
+    this.internalOperation = externalOperation;
+    this.internalFirstOperandValue = this.internalSecondOperandValue;
+    this.internalSecondOperandValue = "";
+  }
   compute() {}
   updateDisplay() {
-    this.internalOperand2ElementObject.innerText = this.internalOperand2Value;
-    this.internalOperand1ElementObject.innerText = this.internalOperand1Value;
+    this.internalOperand2ElementObject.innerText =
+      this.internalSecondOperandValue;
+    this.internalOperand1ElementObject.innerText =
+      this.internalFirstOperandValue;
   }
 }
-// variable testing
-const num1 = 1;
-const num2 = 2;
-const ans = num1 + num2;
-
-const testElement = document.querySelector("displayArea__operand1Zone");
+// testing
 
 // data bindings
 const operand1ElementObject = document.querySelector("[data-previous-operand]");
@@ -47,11 +48,20 @@ const coolCalculator = new Calculator(
   operand2ElementObject
 );
 
-// create a function machine that attaches an event listener to each number button
+// create a function machine that attaches a click event to each number button
 numberButtons.forEach((button) => {
   // for each button.. do this..
   button.addEventListener("click", () => {
     coolCalculator.appendNumberToOperand2Display(button.innerText);
+    coolCalculator.updateDisplay();
+  });
+});
+
+// create a function machine that attaches a click event to each operation button
+operationButtons.forEach((button) => {
+  // for each button.. do this..
+  button.addEventListener("click", () => {
+    coolCalculator.chooseOperation(button.innerText);
     coolCalculator.updateDisplay();
   });
 });
