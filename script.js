@@ -33,6 +33,7 @@ class Calculator {
 }
 // testing
 
+//#region
 // data bindings
 const operand1ElementObject = document.querySelector("[data-previous-operand]");
 const operand2ElementObject = document.querySelector("[data-current-operand]");
@@ -41,6 +42,7 @@ const deleteButton = document.querySelector("[data-delete]");
 const numberButtons = document.querySelectorAll("[data-number]");
 const operationButtons = document.querySelectorAll("[data-operation]");
 const equalsButton = document.querySelector("[data-equals]");
+//#endregion
 
 // create a cool calculator object
 const coolCalculator = new Calculator(
